@@ -20,212 +20,504 @@
 --cream:#fff9f3;
 --gold:#e7c58a;
 --ink:#4b2a39;
---muted:#e8cbd5
+--muted:#e8cbd5;
 }
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
+
 body{
-margin:0;background:var(--wine);color:var(--cream);
-font-family:'DM Sans',sans-serif;overflow-x:hidden
+margin:0;
+background:var(--wine);
+color:var(--cream);
+font-family:'DM Sans',sans-serif;
+overflow-x:hidden;
 }
+
 button{font:inherit;cursor:pointer;border:0}
 .serif{font-family:'Playfair Display',serif}
 .script{font-family:'Caveat',cursive}
 
 #floaties{
-position:fixed;inset:0;pointer-events:none;
-z-index:0;overflow:hidden
+position:fixed;
+inset:0;
+pointer-events:none;
+z-index:0;
+overflow:hidden;
 }
+
 .float{
-position:absolute;bottom:-45px;color:#f9dbe4;
-opacity:.25;animation:rise linear infinite
+position:absolute;
+bottom:-45px;
+color:#f9dbe4;
+opacity:.25;
+animation:rise linear infinite;
 }
+
 @keyframes rise{
 to{transform:translateY(-115vh) rotate(35deg);opacity:0}
 }
 
 main{position:relative;z-index:1}
+
 .hero{
-min-height:100svh;display:grid;place-items:center;
-padding:28px 18px;text-align:center;
-background:radial-gradient(ellipse at 50% 0%,#8c3d5d66,transparent 60%)
+min-height:100svh;
+display:grid;
+place-items:center;
+padding:28px 18px;
+text-align:center;
+background:radial-gradient(ellipse at 50% 0%,#8c3d5d66,transparent 60%);
 }
+
 .hero-card{
-width:min(100%,760px);padding:38px 22px 34px;
-border:1px solid #e7c58a66;border-radius:30px;
+width:min(100%,760px);
+padding:38px 22px 34px;
+border:1px solid #e7c58a66;
+border-radius:30px;
 background:linear-gradient(145deg,#6c2b49d9,#2f1021ef);
 box-shadow:0 25px 90px #16061188;
-position:relative;overflow:hidden
+position:relative;
+overflow:hidden;
 }
+
 .hero-photo{
-width:min(100%,390px);height:230px;object-fit:cover;
-border-radius:18px;border:5px solid #fff9f3;
+width:min(100%,390px);
+height:230px;
+object-fit:cover;
+border-radius:18px;
+border:5px solid #fff9f3;
 box-shadow:0 12px 35px #16061188;
-transform:rotate(-1deg);margin:20px auto 24px;display:block
+transform:rotate(-1deg);
+margin:20px auto 24px;
+display:block;
 }
+
 .eyebrow,.kicker{
-letter-spacing:.22em;text-transform:uppercase;
-font-size:10px;color:var(--gold)
+letter-spacing:.22em;
+text-transform:uppercase;
+font-size:10px;
+color:var(--gold);
 }
+
 .hero h1{
 font:600 clamp(43px,9vw,76px)/1.04 'Playfair Display',serif;
-margin:17px 0 10px
+margin:17px 0 10px;
 }
+
 .hero h1 em{color:#f2bdcc;font-weight:500}
+
 .sub{
-color:#f5dce4;line-height:1.85;font-size:14px;
-max-width:480px;margin:0 auto 25px
+color:#f5dce4;
+line-height:1.85;
+font-size:14px;
+max-width:480px;
+margin:0 auto 25px;
 }
+
 .btn{
-padding:14px 23px;border-radius:999px;
+padding:14px 23px;
+border-radius:999px;
 background:linear-gradient(135deg,#f7dbe3,#e8a9b9);
-color:#48172e;font-weight:700;
-box-shadow:0 8px 25px #17071155;transition:.25s
+color:#48172e;
+font-weight:700;
+box-shadow:0 8px 25px #17071155;
+transition:.25s;
 }
+
 .btn:hover{transform:translateY(-3px)}
+
 .btn.ghost{
-background:transparent;border:1px solid #f5dce477;
-color:var(--cream);box-shadow:none
+background:transparent;
+border:1px solid #f5dce477;
+color:var(--cream);
+box-shadow:none;
 }
+
 .tiny{font-size:11px;color:#dcb8c5;margin-top:17px}
 
 section{
-padding:72px 20px;max-width:1000px;
-margin:auto;position:relative
+padding:72px 20px;
+max-width:1000px;
+margin:auto;
+position:relative;
 }
+
 .hidden{display:none!important}
 .reveal{animation:reveal .8s both}
+
 @keyframes reveal{
 from{opacity:0;transform:translateY(18px)}
 to{opacity:1;transform:none}
 }
+
 .kicker{text-align:center}
+
 .section-title{
 text-align:center;
 font:600 clamp(30px,6vw,47px)/1.15 'Playfair Display',serif;
-margin:12px 0 14px
+margin:12px 0 14px;
 }
+
 .section-intro{
-text-align:center;max-width:620px;margin:0 auto 34px;
-color:var(--muted);line-height:1.85;font-size:14px
+text-align:center;
+max-width:620px;
+margin:0 auto 34px;
+color:var(--muted);
+line-height:1.85;
+font-size:14px;
 }
+
 .divider{
-height:1px;width:76px;
+height:1px;
+width:76px;
 background:linear-gradient(90deg,transparent,var(--gold),transparent);
-margin:28px auto
+margin:28px auto;
 }
 
 .photo-grid{
-display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
-gap:13px;align-items:start
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:13px;
+align-items:start;
 }
+
 .photo-card{
-background:var(--cream);color:var(--ink);
-padding:9px 9px 14px;border-radius:8px;
+background:var(--cream);
+color:var(--ink);
+padding:9px 9px 14px;
+border-radius:8px;
 box-shadow:0 10px 25px #17071155;
-transform:rotate(var(--r))
+transform:rotate(var(--r));
 }
+
 .photo-card img{
-display:block;width:100%;height:auto;max-height:360px;
-aspect-ratio:auto;object-fit:contain;background:#f0dce1
+display:block;
+width:100%;
+height:auto;
+max-height:360px;
+aspect-ratio:auto;
+object-fit:contain;
+background:#f0dce1;
 }
+
 .photo-card.wide img{aspect-ratio:5/4}
+
 .photo-card figcaption{
-text-align:center;font:600 19px 'Caveat',cursive;
-margin:9px 3px 0
+text-align:center;
+font:600 19px 'Caveat',cursive;
+margin:9px 3px 0;
 }
+
 .photo-grid .photo-card:nth-child(3n){margin-top:12px}
+
 .group-title{
-text-align:center;font:500 25px 'Playfair Display',serif;
-margin:35px 0 17px;color:#f4d7e0
+text-align:center;
+font:500 25px 'Playfair Display',serif;
+margin:35px 0 17px;
+color:#f4d7e0;
 }
 
 .timeline{
-max-width:640px;margin:auto;
-border-left:1px solid #d9a6b7;padding-left:23px
+max-width:640px;
+margin:auto;
+border-left:1px solid #d9a6b7;
+padding-left:23px;
 }
+
 .moment{position:relative;padding:0 0 25px 10px}
+
 .moment:before{
-content:'♡';position:absolute;left:-35px;top:0;
-color:var(--gold);background:var(--wine);padding:0 4px
+content:'♡';
+position:absolute;
+left:-35px;
+top:0;
+color:var(--gold);
+background:var(--wine);
+padding:0 4px;
 }
+
 .moment h3{
-font:500 22px 'Playfair Display',serif;margin:0 0 6px
+font:500 22px 'Playfair Display',serif;
+margin:0 0 6px;
 }
+
 .moment p{
-margin:0;color:var(--muted);font-size:13px;line-height:1.8
+margin:0;
+color:var(--muted);
+font-size:13px;
+line-height:1.8;
 }
 
 .song-card{
-max-width:660px;margin:auto;
-border:1px solid #e7c58a66;border-radius:22px;
+max-width:660px;
+margin:auto;
+border:1px solid #e7c58a66;
+border-radius:22px;
 padding:22px;
 background:linear-gradient(145deg,#6c2b4955,#2f1021aa);
-text-align:center
+text-align:center;
 }
+
 .song-card .disc{
-width:76px;height:76px;border-radius:50%;
+width:76px;
+height:76px;
+border-radius:50%;
 margin:0 auto 15px;
 background:radial-gradient(circle,#f8dce5 0 9%,#8d3e5c 10% 25%,#e6b5c4 26% 28%,#5c203c 29% 100%);
 box-shadow:0 0 0 7px #ffffff0d,0 10px 25px #0004;
-animation:spin 9s linear infinite
+animation:spin 9s linear infinite;
 }
+
 @keyframes spin{to{transform:rotate(360deg)}}
+
 .song-card h3{
-font:500 25px 'Playfair Display',serif;margin:5px
+font:500 25px 'Playfair Display',serif;
+margin:5px;
 }
+
 .song-card p{
-font-size:12px;color:var(--muted);line-height:1.7
+font-size:12px;
+color:var(--muted);
+line-height:1.7;
 }
+
 .song-card audio{
-display:block;width:100%;max-width:420px;
-margin:22px auto 16px;border-radius:30px
+display:block;
+width:100%;
+max-width:420px;
+margin:22px auto 16px;
+border-radius:30px;
 }
+
 .music-status{
-font-size:12px;color:var(--gold);
-margin:12px 0
+font-size:12px;
+color:var(--gold);
+margin:12px 0;
 }
 
 .letter-panel{
-background:var(--cream);color:var(--ink);
-border-radius:22px;padding:27px 23px;
+background:var(--cream);
+color:var(--ink);
+border-radius:22px;
+padding:27px 23px;
 box-shadow:0 18px 50px #17071155;
-max-width:700px;margin:auto;position:relative
+max-width:700px;
+margin:auto;
+position:relative;
 }
+
 .letter-panel:before{
-content:'♡';position:absolute;right:22px;top:12px;
-color:#d98da5;font-size:24px
+content:'♡';
+position:absolute;
+right:22px;
+top:12px;
+color:#d98da5;
+font-size:24px;
 }
-.letter-panel p{line-height:1.9;font-size:14px;margin:0 0 16px}
+
+.letter-panel p{
+line-height:1.9;
+font-size:14px;
+margin:0 0 16px;
+}
+
 .letter-panel .letter-heading{
-font:600 26px 'Caveat',cursive;color:#a34e6d
+font:600 26px 'Caveat',cursive;
+color:#a34e6d;
 }
+
 .letter-panel .sign{
-font:600 27px 'Caveat',cursive;color:#a34e6d;margin-top:20px
+font:600 27px 'Caveat',cursive;
+color:#a34e6d;
+margin-top:20px;
 }
 
 .final-card{
-text-align:center;border:1px solid #e7c58a66;
-border-radius:24px;padding:35px 20px;
-background:linear-gradient(145deg,#6c2b4955,#2f1021aa)
+text-align:center;
+border:1px solid #e7c58a66;
+border-radius:24px;
+padding:35px 20px;
+background:linear-gradient(145deg,#6c2b4955,#2f1021aa);
 }
+
 .final-card h2{
-font:600 clamp(31px,6vw,46px) 'Playfair Display',serif
+font:600 clamp(31px,6vw,46px) 'Playfair Display',serif;
 }
+
 .final-card p{color:var(--muted);line-height:1.8}
 .final-card .script{font-size:32px;color:#f2bdcc}
 
 .footer{
-text-align:center;color:#d9b3c0;font-size:12px;
-padding:42px 15px 60px;position:relative;z-index:1
+text-align:center;
+color:#d9b3c0;
+font-size:12px;
+padding:42px 15px 60px;
+position:relative;
+z-index:1;
 }
+
 .confetti{
-position:fixed;top:-15px;width:8px;height:12px;
-z-index:10;pointer-events:none;animation:fall 3.5s linear forwards
+position:fixed;
+top:-15px;
+width:8px;
+height:12px;
+z-index:10;
+pointer-events:none;
+animation:fall 3.5s linear forwards;
 }
+
 @keyframes fall{
 to{transform:translateY(110vh) rotate(720deg);opacity:0}
+}
+
+/* BIRTHDAY CELEBRATION */
+
+.birthday-celebration{
+text-align:center;
+padding:25px 10px 35px;
+margin:20px auto;
+border:1px solid #e7c58a55;
+border-radius:24px;
+background:linear-gradient(145deg,#6c2b4955,#2f102155);
+overflow:hidden;
+}
+
+.balloon-row{
+display:flex;
+justify-content:center;
+align-items:center;
+gap:22px;
+margin:12px auto 25px;
+}
+
+.balloon{
+width:37px;
+height:49px;
+border-radius:50% 50% 45% 45%;
+position:relative;
+animation:balloonFloat 2.5s ease-in-out infinite alternate;
+}
+
+.balloon:after{
+content:'';
+position:absolute;
+height:35px;
+width:1px;
+background:#e7c58a;
+top:48px;
+left:50%;
+}
+
+.balloon:nth-child(1){background:#e7a9ba}
+.balloon:nth-child(2){background:#e7c58a;animation-delay:.4s}
+.balloon:nth-child(3){background:#fff0e6;animation-delay:.8s}
+.balloon:nth-child(4){background:#b96d8b;animation-delay:.2s}
+.balloon:nth-child(5){background:#e7c58a;animation-delay:.6s}
+
+@keyframes balloonFloat{
+to{transform:translateY(-12px) rotate(5deg)}
+}
+
+.cake-wrap{margin:35px auto 20px}
+
+.cake{
+width:190px;
+height:155px;
+margin:auto;
+position:relative;
+}
+
+.candles{
+position:absolute;
+top:0;
+left:50%;
+transform:translateX(-50%);
+display:flex;
+gap:17px;
+z-index:3;
+}
+
+.candle{
+width:9px;
+height:37px;
+background:repeating-linear-gradient(45deg,#fff0e6 0 5px,#e7a9ba 5px 9px);
+border-radius:3px;
+position:relative;
+}
+
+.flame{
+position:absolute;
+width:12px;
+height:17px;
+background:#ffc66d;
+border-radius:50% 50% 50% 0;
+transform:rotate(-45deg);
+top:-17px;
+left:-2px;
+box-shadow:0 0 15px #ffc66d;
+animation:flicker .6s infinite alternate;
+}
+
+@keyframes flicker{
+to{transform:rotate(-40deg) scale(.8);opacity:.7}
+}
+
+.cake.blown .flame{display:none}
+
+.cake-top{
+position:absolute;
+top:39px;
+left:15px;
+width:160px;
+height:28px;
+background:#f7dfe6;
+border-radius:50%;
+z-index:2;
+}
+
+.cake-top:after{
+content:'♡';
+color:#a34e6d;
+font-size:22px;
+position:absolute;
+left:68px;
+top:1px;
+}
+
+.cake-middle{
+position:absolute;
+top:52px;
+left:15px;
+width:160px;
+height:45px;
+background:#d98da5;
+border-radius:8px 8px 12px 12px;
+}
+
+.cake-bottom{
+position:absolute;
+top:91px;
+left:0;
+width:190px;
+height:48px;
+background:#f0c5d2;
+border-radius:8px 8px 15px 15px;
+}
+
+.cake-plate{
+position:absolute;
+bottom:0;
+left:-12px;
+width:214px;
+height:9px;
+background:#e7c58a;
+border-radius:50%;
+}
+
+.candle-message{
+color:#f2bdcc;
+font:600 25px 'Caveat',cursive;
+margin:15px 0;
 }
 
 @media(min-width:650px){
@@ -238,91 +530,209 @@ to{transform:translateY(110vh) rotate(720deg);opacity:0}
 .photo-card:nth-child(4n+3){margin-top:7px}
 .photo-card:nth-child(4n){margin-top:28px}
 }
+
+@media(max-width:380px){
+.balloon-row{gap:15px}
+}
 </style>
 </head>
 
 <body>
+
 <div id="floaties"></div>
+
 <main>
 
 <section class="hero" id="home">
 <div class="hero-card">
+
 <div class="eyebrow">a little world, made just for you</div>
 <div style="font-size:31px;margin-top:15px">♡ ✧ ♡</div>
+
 <h1>For you,<br><em>Abhinna.</em></h1>
+
 <p class="sub">A small collection of our favourite moments, a little birthday surprise, and a whole lot of love.</p>
+
 <img class="hero-photo" src="photos/page-07.jpg" alt="A happy memory together">
+
 <button class="btn" onclick="openSurprise()">Come inside, meri babu ♡</button>
+
 <div class="tiny">Made with love, by your man — Aayush.</div>
+
 </div>
 </section>
 
 <div id="journey" class="hidden">
 
 <section id="birthday">
+
 <div class="kicker">today is all about you</div>
+
 <h2 class="section-title">Happy 25th Birthday,<br><em style="color:#f0b9c8">meri babu.</em></h2>
+
 <p class="section-intro">This time, no counting the distance and no wishing I could be beside you. I'm right here, celebrating you. And that makes today even more special. ❤️</p>
+
 <div class="divider"></div>
-<p class="script" style="font-size:30px;text-align:center;color:#f3c8d3">A little walk through our happy memories…</p>
+
+<!-- BIRTHDAY CAKE AND BALLOONS -->
+
+<div class="birthday-celebration">
+
+<div class="balloon-row">
+<span class="balloon"></span>
+<span class="balloon"></span>
+<span class="balloon"></span>
+<span class="balloon"></span>
+<span class="balloon"></span>
+</div>
+
+<p class="script" style="font-size:30px;color:#f3c8d3">
+A little birthday magic for you ♡
+</p>
+
+<div class="cake-wrap">
+<div class="cake" id="birthdayCake">
+
+<div class="candles">
+<span class="candle"><i class="flame"></i></span>
+<span class="candle"><i class="flame"></i></span>
+<span class="candle"><i class="flame"></i></span>
+</div>
+
+<div class="cake-top"></div>
+<div class="cake-middle"></div>
+<div class="cake-bottom"></div>
+<div class="cake-plate"></div>
+
+</div>
+</div>
+
+<p class="candle-message">Make a wish, my beautiful girl! ✨</p>
+
+<button class="btn" id="blowButton" onclick="blowCandles()">
+Blow the candles! 🎂
+</button>
+
+<p id="candleMessage" class="music-status">
+Three little candles, a thousand wishes for you. ❤️
+</p>
+
+</div>
+
+<div class="divider"></div>
+
+<p class="script" style="font-size:30px;text-align:center;color:#f3c8d3">
+A little walk through our happy memories…
+</p>
+
 </section>
 
 <section id="together">
+
 <div class="kicker">the moments i keep close</div>
 <h2 class="section-title">A little bit of us</h2>
+
 <p class="section-intro">A few photographs, a thousand little feelings. I don't think I'll ever get tired of looking back at these.</p>
 
 <div class="photo-grid">
+
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-01.jpg" alt="A video call memory"><figcaption>Even a screen brought us smiles ♡</figcaption></figure>
+
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-02.jpg" alt="A video call memory"><figcaption>A little hello across the distance</figcaption></figure>
+
 <figure class="photo-card" style="--r:-1.5deg"><img src="photos/page-03.jpg" alt="A video call memory"><figcaption>One of those old happy moments</figcaption></figure>
+
 <figure class="photo-card" style="--r:-1.5deg"><img src="photos/page-04.jpg" alt="A photo together"><figcaption>One of my favourite us moments ♡</figcaption></figure>
+
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-05.jpg" alt="A selfie together"><figcaption>Just us, being us</figcaption></figure>
+
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-06.jpg" alt="A happy selfie"><figcaption>Little moments, big happiness</figcaption></figure>
+
 <figure class="photo-card" style="--r:1.5deg"><img src="photos/page-07.jpg" alt="A dressed-up photo together"><figcaption>A memory I want to keep</figcaption></figure>
+
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-08.jpg" alt="A celebration photo together"><figcaption>Smiles that feel like home</figcaption></figure>
+
 <figure class="photo-card" style="--r:-1.5deg"><img src="photos/page-09.jpg" alt="A photo together"><figcaption>My kind of happiness</figcaption></figure>
+
 <figure class="photo-card" style="--r:1.5deg"><img src="photos/page-10.jpg" alt="A photo together"><figcaption>One more for our little album</figcaption></figure>
+
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-11.jpg" alt="A close selfie together"><figcaption>Close, comfortable, and us</figcaption></figure>
+
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-12.jpg" alt="A selfie together"><figcaption>Everyday magic ♡</figcaption></figure>
+
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-13.jpg" alt="A photo together"><figcaption>One of those lovely days</figcaption></figure>
+
 <figure class="photo-card" style="--r:-1.5deg"><img src="photos/page-14.jpg" alt="A close selfie together"><figcaption>My favourite view</figcaption></figure>
+
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-15.jpg" alt="A mirror photo together"><figcaption>Another little memory</figcaption></figure>
+
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-16.jpg" alt="A quiet moment together"><figcaption>And many more to come</figcaption></figure>
+
 </div>
 
 <h3 class="group-title">And a little extra space for you…</h3>
 
 <div class="photo-grid">
+
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-17.jpg" alt="Abhinna smiling"><figcaption>Your lovely little world</figcaption></figure>
+
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-18.jpg" alt="Abhinna outdoors"><figcaption>That beautiful smile</figcaption></figure>
+
 <figure class="photo-card" style="--r:1.5deg"><img src="photos/page-19.jpg" alt="Abhinna dressed up"><figcaption>Absolutely graceful</figcaption></figure>
+
 <figure class="photo-card" style="--r:-1.5deg"><img src="photos/page-20.jpg" alt="Abhinna at a cafe"><figcaption>A moment just for you</figcaption></figure>
+
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-21.jpg" alt="Abhinna in a beautiful outfit"><figcaption>Keep shining, meri babu ✨</figcaption></figure>
+
 </div>
+
 </section>
 
 <section id="story">
+
 <div class="kicker">little chapters i remember</div>
 <h2 class="section-title">Some memories stay</h2>
+
 <p class="section-intro">Not because they were grand, but because they were ours.</p>
+
 <div class="timeline">
-<div class="moment"><h3>That supermarket thought</h3><p>“Har zaroori chiz ko hum apne paas nahi rakh sakte.” A little line I once wrote, which somehow became a thought I still carry.</p></div>
-<div class="moment"><h3>Our time at Nani's home</h3><p>One of those chapters where even the ordinary moments found a special place in my heart.</p></div>
-<div class="moment"><h3>8 December 2024</h3><p>The day you were leaving for Bengaluru. It reminds me how much the simple happiness of being together means.</p></div>
-<div class="moment"><h3>Your MBA convocation</h3><p>You in that beautiful saree, on a day you had worked so hard for. I hope you always feel proud of yourself.</p></div>
+
+<div class="moment">
+<h3>That supermarket thought</h3>
+<p>“Har zaroori chiz ko hum apne paas nahi rakh sakte.” A little line I once wrote, which somehow became a thought I still carry.</p>
+</div>
+
+<div class="moment">
+<h3>Our time at Nani's home</h3>
+<p>One of those chapters where even the ordinary moments found a special place in my heart.</p>
+</div>
+
+<div class="moment">
+<h3>8 December 2024</h3>
+<p>The day you were leaving for Bengaluru. It reminds me how much the simple happiness of being together means.</p>
+</div>
+
+<div class="moment">
+<h3>Your MBA convocation</h3>
+<p>You in that beautiful saree, on a day you had worked so hard for. I hope you always feel proud of yourself.</p>
+</div>
+
 </div>
 </section>
 
-<!-- UPDATED SONG SECTION -->
 <section id="song">
+
 <div class="kicker">a song for this little world</div>
 <h2 class="section-title">Our song for today</h2>
+
 <p class="section-intro">Some songs carry feelings that are difficult to put into words. This one felt right for us. ♡</p>
 
 <div class="song-card">
+
 <div class="disc"></div>
+
 <div class="kicker">a little melody, just for you ♡</div>
+
 <h3>Tum Ho Toh</h3>
 <p>Vishal Mishra · Saiyaara</p>
 
@@ -336,35 +746,58 @@ Your browser does not support audio playback.
 <button class="btn" id="musicButton" onclick="toggleSong()">Play Our Song ♫</button>
 
 <p style="margin-top:14px">A song that reminds me of you. Play it whenever you want, meri babu. ❤️</p>
+
 </div>
 </section>
 
 <section id="letter">
+
 <div class="kicker">a few words from your man</div>
 <h2 class="section-title">For my favourite person</h2>
+
 <div class="letter-panel">
+
 <p class="letter-heading">Happy Birthday, My Babu! ❤️</p>
+
 <p>To my favourite person, my अभिन्ना,</p>
+
 <p>Happy 25th birthday, meri babu! ❤️</p>
+
 <p>I don't know where to begin, because sometimes even a thousand words don't feel enough to express what you mean to me.</p>
+
 <p>We've collected so many little memories together, from those ordinary conversations to the moments that became special without us even realising it. I still remember that little thought I once wrote in the supermarket: "Har zaroori cheez ko hum apne paas nahi rakh sakte." Funny how some things become so precious that you never want to let them go.</p>
+
 <p>I've seen you in so many beautiful moments, and that day when you wore that saree at your MBA convocation is still one of my favourite pictures in my mind. But honestly, you don't need any special occasion to look beautiful to me.</p>
+
 <p>And this birthday feels extra special. This time, I don't have to count the distance, wait for a call, or wish I could be beside you. I'm here, celebrating your day with you, and that's a happiness I can't properly put into words.</p>
+
 <p>I know we're not perfect, and we may not always have everything figured out. But one thing I want you to remember is that you will always have someone cheering for you, believing in you, respecting your dreams and wishing to see you happy.</p>
+
 <p>I hope this new year of your life brings you all the happiness, success, peace and love that your heart deserves. Never stop being the beautiful, crazy, strong and adorable person you are.</p>
+
 <p>And please, never forget that you are loved. Not just on your birthday, but on all those ordinary days in between.</p>
+
 <p>Happy Birthday once again, meri babu. Keep smiling, keep shining, and keep being my favourite अभिन्ना.</p>
+
 <p class="sign">With all my love,<br>Your man, Aayush. ❤️</p>
+
 </div>
 </section>
 
 <section>
+
 <div class="final-card">
+
 <div style="font-size:32px">♡ ✧ ♡</div>
+
 <h2>Happy Birthday, अभिन्ना.</h2>
+
 <p>I hope today gives you a hundred little reasons to smile.<br>I'm so happy I get to be here with you.</p>
+
 <p class="script">All my love, always. — Aayush ♡</p>
+
 <button class="btn" onclick="celebrate()">One last little surprise ✨</button>
+
 </div>
 </section>
 
@@ -374,110 +807,181 @@ Your browser does not support audio playback.
 <div class="footer">A little world made just for Abhinna · with love from Aayush ♡</div>
 
 <script>
-const $ = id => document.getElementById(id);
 
+const $ = id => document.getElementById(id);
 const audio = $('birthdaySong');
 
 function openSurprise(){
-  $('journey').classList.remove('hidden');
-  $('journey').classList.add('reveal');
 
-  startSong();
+$('journey').classList.remove('hidden');
+$('journey').classList.add('reveal');
 
-  $('birthday').scrollIntoView({behavior:'smooth'});
-  confetti();
+startSong();
+
+$('birthday').scrollIntoView({behavior:'smooth'});
+
+confetti();
+
 }
 
-// Start music from the entrance button interaction
 function startSong(){
-  if(!audio) return;
 
-  audio.play()
-    .then(() => updateMusicUI())
-    .catch(() => {
-      $('musicStatus').textContent =
-        'Tap Play Our Song to start the music ♡';
-    });
+if(!audio) return;
+
+audio.play()
+.then(() => updateMusicUI())
+.catch(() => {
+$('musicStatus').textContent =
+'Tap Play Our Song to start the music ♡';
+});
+
 }
 
 function toggleSong(){
-  if(!audio) return;
 
-  if(audio.paused){
-    audio.play()
-      .then(() => updateMusicUI())
-      .catch(() => {
-        $('musicStatus').textContent =
-          'Music could not start. Please check the audio file.';
-      });
-  }else{
-    audio.pause();
-    updateMusicUI();
-  }
+if(!audio) return;
+
+if(audio.paused){
+
+audio.play()
+.then(() => updateMusicUI())
+.catch(() => {
+$('musicStatus').textContent =
+'Music could not start. Please check the audio file.';
+});
+
+}else{
+
+audio.pause();
+updateMusicUI();
+
+}
+
 }
 
 function updateMusicUI(){
-  if(!audio) return;
 
-  if(audio.paused){
-    $('musicButton').textContent = 'Play Our Song ♫';
-    $('musicStatus').textContent = 'Paused ♡';
-  }else{
-    $('musicButton').textContent = 'Pause Our Song ♡';
-    $('musicStatus').textContent = 'Now playing Tum Ho Toh ♡';
-  }
+if(!audio) return;
+
+if(audio.paused){
+
+$('musicButton').textContent = 'Play Our Song ♫';
+$('musicStatus').textContent = 'Paused ♡';
+
+}else{
+
+$('musicButton').textContent = 'Pause Our Song ♡';
+$('musicStatus').textContent = 'Now playing Tum Ho Toh ♡';
+
+}
+
 }
 
 audio.addEventListener('play', updateMusicUI);
 audio.addEventListener('pause', updateMusicUI);
 
 audio.addEventListener('ended', () => {
-  $('musicButton').textContent = 'Play Our Song ♫';
-  $('musicStatus').textContent = 'A little melody for you ♡';
+
+$('musicButton').textContent = 'Play Our Song ♫';
+$('musicStatus').textContent = 'A little melody for you ♡';
+
 });
 
 audio.addEventListener('error', () => {
-  $('musicStatus').textContent =
-    'Unable to load the song. Please check the MP3 file.';
+
+$('musicStatus').textContent =
+'Unable to load the song. Please check the MP3 file.';
+
 });
 
-function confetti(){
-  for(let i=0;i<65;i++){
-    let c=document.createElement('i');
-    c.className='confetti';
-    c.style.left=Math.random()*100+'vw';
-    c.style.background=[
-      '#f5c8d5','#e7c58a','#fff1f4','#c97896'
-    ][i%4];
-    c.style.animationDelay=Math.random()*.8+'s';
-    document.body.appendChild(c);
-    setTimeout(()=>c.remove(),4500);
-  }
+/* BLOW THE BIRTHDAY CANDLES */
+
+function blowCandles(){
+
+const cake = $('birthdayCake');
+const message = $('candleMessage');
+const button = $('blowButton');
+
+if(!cake) return;
+
+cake.classList.add('blown');
+
+message.textContent =
+'Happy Birthday, meri babu! May all your wishes come true. ❤️';
+
+button.textContent = 'Wish made! ❤️';
+button.disabled = true;
+button.style.opacity = '.75';
+
+confetti();
+
 }
+
+/* CONFETTI CELEBRATION */
+
+function confetti(){
+
+for(let i=0;i<65;i++){
+
+let c=document.createElement('i');
+
+c.className='confetti';
+c.style.left=Math.random()*100+'vw';
+
+c.style.background=[
+'#f5c8d5',
+'#e7c58a',
+'#fff1f4',
+'#c97896'
+][i%4];
+
+c.style.animationDelay=Math.random()*.8+'s';
+
+document.body.appendChild(c);
+
+setTimeout(()=>c.remove(),4500);
+
+}
+
+}
+
+/* FINAL SURPRISE */
 
 function celebrate(){
-  confetti();
 
-  let m=document.createElement('div');
-  m.textContent='May every lovely thing find its way to you, meri babu. ♡';
+confetti();
 
-  m.style.cssText=
-  'position:fixed;inset:40% 12px auto;text-align:center;z-index:20;font:600 30px Caveat,cursive;color:#fff;background:#4a1732ee;padding:24px;border:1px solid #e7c58a;border-radius:20px';
+let m=document.createElement('div');
 
-  document.body.appendChild(m);
-  setTimeout(()=>m.remove(),2600);
+m.textContent='May every lovely thing find its way to you, meri babu. ♡';
+
+m.style.cssText=
+'position:fixed;inset:40% 12px auto;text-align:center;z-index:20;font:600 30px Caveat,cursive;color:#fff;background:#4a1732ee;padding:24px;border:1px solid #e7c58a;border-radius:20px';
+
+document.body.appendChild(m);
+
+setTimeout(()=>m.remove(),2600);
+
 }
+
+/* FLOATING HEARTS */
 
 for(let i=0;i<22;i++){
-  let h=document.createElement('span');
-  h.className='float';
-  h.textContent=['♡','✧','♥'][i%3];
-  h.style.left=Math.random()*100+'%';
-  h.style.animationDuration=(12+Math.random()*16)+'s';
-  h.style.animationDelay=(-Math.random()*20)+'s';
-  h.style.fontSize=(12+Math.random()*17)+'px';
-  $('floaties').appendChild(h);
+
+let h=document.createElement('span');
+
+h.className='float';
+h.textContent=['♡','✧','♥'][i%3];
+
+h.style.left=Math.random()*100+'%';
+h.style.animationDuration=(12+Math.random()*16)+'s';
+h.style.animationDelay=(-Math.random()*20)+'s';
+h.style.fontSize=(12+Math.random()*17)+'px';
+
+$('floaties').appendChild(h);
+
 }
+
 </script>
 
 </body>
