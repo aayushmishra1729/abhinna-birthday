@@ -1,5 +1,4 @@
-
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -215,6 +214,75 @@ text-align:center;
 font:500 25px 'Playfair Display',serif;
 margin:35px 0 17px;
 color:#f4d7e0;
+}
+
+/* JUST YOU, ABHINNA - SOLO PHOTO GALLERY */
+
+.solo-gallery{
+max-width:1100px;
+padding:80px 20px;
+text-align:center;
+background:linear-gradient(180deg,#61254155,#40172b);
+}
+
+.solo-gallery .solo-heading{
+font:600 clamp(34px,7vw,52px)/1.15 'Playfair Display',serif;
+color:#f7dfe6;
+margin:14px 0;
+}
+
+.solo-gallery .solo-heading em{
+color:#e7a9ba;
+font-weight:500;
+}
+
+.solo-gallery .section-intro{
+max-width:650px;
+}
+
+.solo-photo-grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:16px;
+align-items:start;
+max-width:1050px;
+margin:38px auto 0;
+}
+
+.solo-photo-card{
+background:var(--cream);
+color:var(--ink);
+padding:9px 9px 15px;
+border-radius:7px;
+box-shadow:0 10px 28px #17071166;
+transform:rotate(var(--tilt,0deg));
+transition:transform .3s ease,box-shadow .3s ease;
+}
+
+.solo-photo-card:hover{
+transform:rotate(0deg) translateY(-6px);
+box-shadow:0 17px 32px #17071188;
+}
+
+.solo-photo-card img{
+display:block;
+width:100%;
+height:auto;
+aspect-ratio:4/5;
+object-fit:cover;
+background:#f0dce1;
+border-radius:3px;
+}
+
+.solo-photo-card figcaption{
+text-align:center;
+font:600 19px 'Caveat',cursive;
+margin:11px 3px 0;
+color:#6d354d;
+}
+
+.solo-photo-grid .solo-photo-card:nth-child(3n){
+margin-top:13px;
 }
 
 .timeline{
@@ -524,15 +592,23 @@ margin:15px 0;
 .hero-card{padding:50px 45px}
 .hero-photo{height:270px}
 .photo-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:17px}
+.solo-photo-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:19px}
 .letter-panel{padding:42px 48px}
 .photo-card:nth-child(4n+1){margin-top:0}
 .photo-card:nth-child(4n+2){margin-top:22px}
 .photo-card:nth-child(4n+3){margin-top:7px}
 .photo-card:nth-child(4n){margin-top:28px}
+.solo-photo-card:nth-child(4n+1){margin-top:0}
+.solo-photo-card:nth-child(4n+2){margin-top:22px}
+.solo-photo-card:nth-child(4n+3){margin-top:7px}
+.solo-photo-card:nth-child(4n){margin-top:28px}
 }
 
 @media(max-width:380px){
 .balloon-row{gap:15px}
+.solo-photo-grid{gap:10px}
+.solo-photo-card{padding:7px 7px 12px}
+.solo-photo-card figcaption{font-size:16px}
 }
 </style>
 </head>
@@ -637,35 +713,20 @@ A little walk through our happy memories…
 <div class="photo-grid">
 
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-01.jpg" alt="A video call memory"><figcaption>Even a screen brought us smiles ♡</figcaption></figure>
-
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-02.jpg" alt="A video call memory"><figcaption>A little hello across the distance</figcaption></figure>
-
 <figure class="photo-card" style="--r:-1.5deg"><img src="photos/page-03.jpg" alt="A video call memory"><figcaption>One of those old happy moments</figcaption></figure>
-
 <figure class="photo-card" style="--r:-1.5deg"><img src="photos/page-04.jpg" alt="A photo together"><figcaption>One of my favourite us moments ♡</figcaption></figure>
-
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-05.jpg" alt="A selfie together"><figcaption>Just us, being us</figcaption></figure>
-
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-06.jpg" alt="A happy selfie"><figcaption>Little moments, big happiness</figcaption></figure>
-
 <figure class="photo-card" style="--r:1.5deg"><img src="photos/page-07.jpg" alt="A dressed-up photo together"><figcaption>A memory I want to keep</figcaption></figure>
-
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-08.jpg" alt="A celebration photo together"><figcaption>Smiles that feel like home</figcaption></figure>
-
 <figure class="photo-card" style="--r:-1.5deg"><img src="photos/page-09.jpg" alt="A photo together"><figcaption>My kind of happiness</figcaption></figure>
-
 <figure class="photo-card" style="--r:1.5deg"><img src="photos/page-10.jpg" alt="A photo together"><figcaption>One more for our little album</figcaption></figure>
-
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-11.jpg" alt="A close selfie together"><figcaption>Close, comfortable, and us</figcaption></figure>
-
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-12.jpg" alt="A selfie together"><figcaption>Everyday magic ♡</figcaption></figure>
-
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-13.jpg" alt="A photo together"><figcaption>One of those lovely days</figcaption></figure>
-
 <figure class="photo-card" style="--r:-1.5deg"><img src="photos/page-14.jpg" alt="A close selfie together"><figcaption>My favourite view</figcaption></figure>
-
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-15.jpg" alt="A mirror photo together"><figcaption>Another little memory</figcaption></figure>
-
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-16.jpg" alt="A quiet moment together"><figcaption>And many more to come</figcaption></figure>
 
 </div>
@@ -675,16 +736,107 @@ A little walk through our happy memories…
 <div class="photo-grid">
 
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-17.jpg" alt="Abhinna smiling"><figcaption>Your lovely little world</figcaption></figure>
-
 <figure class="photo-card" style="--r:-1deg"><img src="photos/page-18.jpg" alt="Abhinna outdoors"><figcaption>That beautiful smile</figcaption></figure>
-
 <figure class="photo-card" style="--r:1.5deg"><img src="photos/page-19.jpg" alt="Abhinna dressed up"><figcaption>Absolutely graceful</figcaption></figure>
-
 <figure class="photo-card" style="--r:-1.5deg"><img src="photos/page-20.jpg" alt="Abhinna at a cafe"><figcaption>A moment just for you</figcaption></figure>
-
 <figure class="photo-card" style="--r:1deg"><img src="photos/page-21.jpg" alt="Abhinna in a beautiful outfit"><figcaption>Keep shining, meri babu ✨</figcaption></figure>
 
 </div>
+</section>
+
+<!-- NEW GALLERY: ALL 34 SOLO PHOTOS OF ABHINNA -->
+
+<section id="just-her" class="solo-gallery">
+
+<div class="kicker">a little corner dedicated only to you</div>
+
+<h2 class="solo-heading">Just You, <em>Abhinna.</em></h2>
+
+<p class="section-intro">
+Because some photographs deserve their own little space.
+No occasion, no reason, just you being beautifully you.
+I could never get tired of these smiles. ❤️
+</p>
+
+<div class="divider"></div>
+
+<div class="solo-photo-grid">
+
+<figure class="solo-photo-card" style="--tilt:-1deg"><img src="photos/abhinna-01.jpg" alt="Abhinna photo 1" loading="lazy"><figcaption>My favourite kind of sunshine ♡</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1deg"><img src="photos/abhinna-02.jpg" alt="Abhinna photo 2" loading="lazy"><figcaption>Simply beautiful, always</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1.5deg"><img src="photos/abhinna-03.jpg" alt="Abhinna photo 3" loading="lazy"><figcaption>That smile, meri babu</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1deg"><img src="photos/abhinna-04.jpg" alt="Abhinna photo 4" loading="lazy"><figcaption>A little piece of magic</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1.5deg"><img src="photos/abhinna-05.jpg" alt="Abhinna photo 5" loading="lazy"><figcaption>Grace in every little detail</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1deg"><img src="photos/abhinna-06.jpg" alt="Abhinna photo 6" loading="lazy"><figcaption>Beautiful without even trying</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1deg"><img src="photos/abhinna-07.jpg" alt="Abhinna photo 7" loading="lazy"><figcaption>My pretty girl ♡</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1.5deg"><img src="photos/abhinna-08.jpg" alt="Abhinna photo 8" loading="lazy"><figcaption>One more favourite</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1deg"><img src="photos/abhinna-09.jpg" alt="Abhinna photo 9" loading="lazy"><figcaption>Elegance looks like you</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1.5deg"><img src="photos/abhinna-10.jpg" alt="Abhinna photo 10" loading="lazy"><figcaption>Keep that smile forever</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1deg"><img src="photos/abhinna-11.jpg" alt="Abhinna photo 11" loading="lazy"><figcaption>A frame full of you</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1deg"><img src="photos/abhinna-12.jpg" alt="Abhinna photo 12" loading="lazy"><figcaption>My favourite view</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1.5deg"><img src="photos/abhinna-13.jpg" alt="Abhinna photo 13" loading="lazy"><figcaption>Simply, wonderfully you</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1.5deg"><img src="photos/abhinna-14.jpg" alt="Abhinna photo 14" loading="lazy"><figcaption>A little moment of beauty</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1deg"><img src="photos/abhinna-15.jpg" alt="Abhinna photo 15" loading="lazy"><figcaption>Always lovely, always you</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1deg"><img src="photos/abhinna-16.jpg" alt="Abhinna photo 16" loading="lazy"><figcaption>My favourite kind of pretty</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1.5deg"><img src="photos/abhinna-17.jpg" alt="Abhinna photo 17" loading="lazy"><figcaption>Made of a thousand little charms</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1deg"><img src="photos/abhinna-18.jpg" alt="Abhinna photo 18" loading="lazy"><figcaption>There's something about this smile</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1.5deg"><img src="photos/abhinna-19.jpg" alt="Abhinna photo 19" loading="lazy"><figcaption>Forever graceful</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1deg"><img src="photos/abhinna-20.jpg" alt="Abhinna photo 20" loading="lazy"><figcaption>A picture worth keeping</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1deg"><img src="photos/abhinna-21.jpg" alt="Abhinna photo 21" loading="lazy"><figcaption>My sunshine on any day</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1.5deg"><img src="photos/abhinna-22.jpg" alt="Abhinna photo 22" loading="lazy"><figcaption>Beautiful in your own way</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1.5deg"><img src="photos/abhinna-23.jpg" alt="Abhinna photo 23" loading="lazy"><figcaption>One of a kind</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1deg"><img src="photos/abhinna-24.jpg" alt="Abhinna photo 24" loading="lazy"><figcaption>That effortless charm ♡</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1deg"><img src="photos/abhinna-25.jpg" alt="Abhinna photo 25" loading="lazy"><figcaption>A little more of my favourite girl</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1.5deg"><img src="photos/abhinna-26.jpg" alt="Abhinna photo 26" loading="lazy"><figcaption>Always a reason to smile</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1.5deg"><img src="photos/abhinna-27.jpg" alt="Abhinna photo 27" loading="lazy"><figcaption>Pretty little moments</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1deg"><img src="photos/abhinna-28.jpg" alt="Abhinna photo 28" loading="lazy"><figcaption>So effortlessly lovely</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1deg"><img src="photos/abhinna-29.jpg" alt="Abhinna photo 29" loading="lazy"><figcaption>My beautiful अभिन्ना</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1.5deg"><img src="photos/abhinna-30.jpg" alt="Abhinna photo 30" loading="lazy"><figcaption>A little forever favourite</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1.5deg"><img src="photos/abhinna-31.jpg" alt="Abhinna photo 31" loading="lazy"><figcaption>Keep being your lovely self</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1deg"><img src="photos/abhinna-32.jpg" alt="Abhinna photo 32" loading="lazy"><figcaption>Another reason to adore you</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:1deg"><img src="photos/abhinna-33.jpg" alt="Abhinna photo 33" loading="lazy"><figcaption>Simply my favourite person</figcaption></figure>
+
+<figure class="solo-photo-card" style="--tilt:-1.5deg"><img src="photos/abhinna-34.jpg" alt="Abhinna photo 34" loading="lazy"><figcaption>And always, my beautiful babu ♡</figcaption></figure>
+
+</div>
+
+<div class="divider"></div>
+
+<p class="script" style="font-size:30px;color:#f3c8d3">
+Every picture has a little piece of you. And I love every one of them. ♡
+</p>
 
 </section>
 
